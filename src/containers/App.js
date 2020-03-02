@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import Navigation from './components/Navigation/Navigation';
-import Home from './components/Home/Home';
-import Register from './components/EntryForm/Register/Register';
-import PassengerEntry from './components/EntryForm/PassengerEntry/PassengerEntry';
-import VehicleEntry from './components/EntryForm/VehicleEntry/VehicleEntry';
-import LocationEntry from './components/EntryForm/LocationEntry/LocationEntry';
-import BookPassenger from './components/BookPassenger/BookPassenger';
-
-import Signin from './components/EntryForm/Signin/Signin';
-
+import Navigation from '../components/Navigation/Navigation';
+import Home from '../components/Home/Home';
+import Register from '../components/EntryForm/Register/Register';
+import PassengerEntry from '../components/EntryForm/PassengerEntry/PassengerEntry';
+import VehicleEntry from '../components/EntryForm/VehicleEntry/VehicleEntry';
+import LocationEntry from '../components/EntryForm/LocationEntry/LocationEntry';
+import BookPassenger from '../components/BookPassenger/BookPassenger';
+import Signin from '../components/EntryForm/Signin/Signin';
 import './App.css';
 import 'tachyons';
 

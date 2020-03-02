@@ -5,7 +5,7 @@ const Home = ({ onRouteChange }) => {
 	return (
 		<div>
 		<h2 className='tc gray f4'>FCF Apps</h2>
-			<nav>				
+			<nav className='sidebar'>				
 	
 				<p className='tl pa2'>Entry Form</p>
 				<ul>
