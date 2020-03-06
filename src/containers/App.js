@@ -15,9 +15,33 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      route: 'signin'
+      route: 'signin',
+      user: {
+        id: '',
+        name: '',
+        email: '',
+        entries: 0,
+        joined:  ''
+      }
     }
   }
+
+  loadUser = (data) => {
+    this.setState({user: {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        entries: data.entries,
+        joined:  data.joined
+    }})
+  }
+
+  // connecting to server.js
+  // componentDidMount() {
+  //   fetch('http://localhost:3000')
+  //   .then(response => response.json())
+  //   .then(console.log)
+  // }
 
   onRouteChange = (route) => {
     this.setState({route: route});
@@ -30,7 +54,7 @@ class App extends Component {
           {  
             this.state.route === 'signin'
             ? 
-            <Signin onRouteChange={this.onRouteChange}/>
+            <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
             :               
               (
                  this.state.route === 'home'
@@ -40,7 +64,7 @@ class App extends Component {
                     ( 
                       this.state.route === 'register'
                       ?
-                      <Register onRouteChange={this.onRouteChange}/>
+                      <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                       :
                       (
                         this.state.route === 'passenger'
@@ -60,11 +84,11 @@ class App extends Component {
                             <LocationEntry onRouteChange={this.onRouteChange}/>
                           )
                           
-                        )
+                         ) 
                         
-                      )
+                       )
                       
-                    )
+                     )
               )      
           }   
       </div>
